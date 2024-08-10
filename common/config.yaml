@@ -1,0 +1,4 @@
+base_model = "Helsinki-NLP/opus-mt-af-fr"
+base_data = "uvci/Koumankan_mt_dyu_fr"
+epochs = 1000
+save_checkpoint_interval=100

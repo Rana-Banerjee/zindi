@@ -1,0 +1,2 @@
+Sno.,Name,Description,base_model,base_data,train_epochs,train_params,local_BLEU,ct_BLEU,zindi_BLEU
+1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,,,,,
