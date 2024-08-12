@@ -1,4 +1,13 @@
-base_model = "Helsinki-NLP/opus-mt-af-fr"
-base_data = "uvci/Koumankan_mt_dyu_fr"
-epochs = 1000
-save_checkpoint_interval=100
+checkpoint: "checkpoint-100"
+resume_from_checkpoint: "/root/zindi/models/marian/marian_output/checkpoint-300"
+image_name: "zindi-image:0.2.6"
+file_path: "/home/rana/Projects/zindi/deployment/docker-compose.yml"
+new_model_path: "models/marian/marian_output/"
+ct_model_path: "models/marian/ct/"
+
+# model_checkpoint="/root/zindi/models/marian/marian_output/"+checkpoint
+# model_checkpoint_ct="/root/zindi/models/marian/ct/"+checkpoint
+# checkpoint_name = "checkpoint-1700"
+# output_dir="models/marian/ct/"+checkpoint_name
+# output_dir="/home/rana/Projects/zindi/models/marian/ct/"+checkpoint_name
+
