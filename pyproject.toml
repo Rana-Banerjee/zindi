@@ -6,7 +6,7 @@ authors = ["Rana Banerjee <rana1224@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.9.5"
+python = "^3.9, <3.10"
 datasets = "^2.20.0"
 evaluate = "^0.4.2"
 torch = "^2.4.0"
