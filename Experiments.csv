@@ -1,2 +1,16 @@
-Sno.,Name,Description,base_model,base_data,train_epochs,train_params,local_BLEU,ct_BLEU,zindi_BLEU
-1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,,,,,
+Sno.,Name,Description,base_model,base_data,train_epochs,train_params,local_BLEU,ct_BLEU,zindi_BLEU,melio_sub_#
+1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,1700,"label_smoothing_factor=0.00001
+learning_rate=5e-04
+gradient_accumulation_steps=8
+generation_max_length=150
+generation_num_beams=1
+max_source_length= 150
+warmup_steps=10
+weight_decay=0.00001
+seed=42
+fp16=""True""
+fp16_backend=""auto""
+fp16_full_eval=""True""
+full_determinism=""True""
+model_name_or_path = ""Helsinki-NLP/opus-mt-af-fr""
+dataset_name = ""uvci/Koumankan_mt_dyu_fr""",6.19,5.46,,22

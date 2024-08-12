@@ -49,3 +49,23 @@ fp16_full_eval="True"
 full_determinism="True"
 model_name_or_path = "Helsinki-NLP/opus-mt-af-fr"
 dataset_name = "uvci/Koumankan_mt_dyu_fr"
+
+epochs: 1700
+BLEU validation : 6.19
+CT BLEU validation : 5.46
+CONFIG:
+label_smoothing_factor=0.00001
+learning_rate=5e-04
+gradient_accumulation_steps=8
+generation_max_length=150
+generation_num_beams=1
+max_source_length= 150
+warmup_steps=10
+weight_decay=0.00001
+seed=42
+fp16="True"
+fp16_backend="auto"
+fp16_full_eval="True"
+full_determinism="True"
+model_name_or_path = "Helsinki-NLP/opus-mt-af-fr"
+dataset_name = "uvci/Koumankan_mt_dyu_fr"
