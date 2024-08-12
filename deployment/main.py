@@ -97,6 +97,7 @@ class TranslationModel(Model):
         except Exception as e:
             print(f"Translation error: ", e)
             translations = [""]  # Return empty string if translation fails
+        translations = ["some thing"] 
         return translations
 
     def _create_response(self, translation: str) -> InferResponse:

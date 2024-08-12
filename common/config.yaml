@@ -1,7 +1,7 @@
-checkpoint: "checkpoint-100"
-resume_from_checkpoint: "/root/zindi/models/marian/marian_output/checkpoint-300"
+checkpoint: "checkpoint-1700"
+resume_from_checkpoint: "/root/zindi/models/marian/marian_output/checkpoint-1700"
 image_name: "zindi-image:0.2.6"
-file_path: "/home/rana/Projects/zindi/deployment/docker-compose.yml"
+file_path: "deployment/docker-compose.yml"
 new_model_path: "models/marian/marian_output/"
 ct_model_path: "models/marian/ct/"
 

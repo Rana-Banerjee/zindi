@@ -13,4 +13,5 @@ fp16_backend=""auto""
 fp16_full_eval=""True""
 full_determinism=""True""
 model_name_or_path = ""Helsinki-NLP/opus-mt-af-fr""
-dataset_name = ""uvci/Koumankan_mt_dyu_fr""",6.19,5.46,,22
+dataset_name = ""uvci/Koumankan_mt_dyu_fr""",6.19,5.46,0.167,22
+2,MT2,Blank preds,-,-,-,-,-,-,,23

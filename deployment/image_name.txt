@@ -1,1 +1,0 @@
-058264459447.dkr.ecr.eu-west-1.amazonaws.com/highwind/f463c7a9-f305-472f-8e49-5f602a7d7882/189795da-a0aa-4912-9c1c-c53cb88ac253:latest
