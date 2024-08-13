@@ -12,8 +12,6 @@ poetry install
 
 # install python and jupyter extensions
 
-%cd /root/zindi/
-!git clone https://github.com/huggingface/transformers.git
-%cd transformers
-!pip install -e .
-%cd ../common
+git clone https://github.com/huggingface/transformers.git
+cd transformers
+pip install -e .
