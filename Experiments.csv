@@ -36,7 +36,7 @@ data['encoder_attention_heads']=4
 data['encoder_ffn_dim']=1024
 data['num_beams']=1
 ",Same as 1,,,,,
-4,,,,,,,,,,,,
+4,MT4,3 + Custom Tokenizer,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,,Same as 3,Same as 1,,,,,
 5,,,,,,,,,,,,
 6,,,,,,,,,,,,
 ,,,,,,,,,,,,
