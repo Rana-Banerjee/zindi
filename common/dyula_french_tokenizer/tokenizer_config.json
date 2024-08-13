@@ -1,0 +1,41 @@
+{
+  "added_tokens_decoder": {
+    "0": {
+      "content": "</s>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "1": {
+      "content": "<unk>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "59421": {
+      "content": "<pad>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "bos_token": "<s>",
+  "clean_up_tokenization_spaces": true,
+  "eos_token": "</s>",
+  "model_max_length": 512,
+  "pad_token": "<pad>",
+  "separate_vocabs": false,
+  "source_lang": "dyu",
+  "sp_model_kwargs": {},
+  "src_vocab_file": "dyu.vocab",
+  "target_lang": "fr",
+  "tgt_vocab_file": "fr.vocab",
+  "tokenizer_class": "MarianTokenizer",
+  "unk_token": "<unk>"
+}
