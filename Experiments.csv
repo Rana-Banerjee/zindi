@@ -1,5 +1,18 @@
-Sno.,Name,Description,base_model,base_data,train_epochs,train_params,local_BLEU,ct_BLEU,zindi_BLEU,melio_sub_#
-1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,1700,"label_smoothing_factor=0.00001
+Sno.,Name,Description,base_model,base_data,train_epochs,config,train_params,local_BLEU,ct_BLEU,zindi_BLEU,melio_sub_#,train_ct_BLEU
+1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,2000 (1700),"data['decoder_attention_heads']=8
+data['decoder_ffn_dim']=2048
+data['decoder_layers']=6
+data['decoder_vocab_size']=59422
+data['dropout']=0.1
+data['encoder_attention_heads']=8
+data['encoder_ffn_dim']=2048
+data['encoder_layers']=6
+data['max_length']=512
+data['max_position_embeddings']=512
+data['num_beams']=4
+data['num_hidden_layers']=6
+data['torch_dtype']=""float32""
+data['vocab_size']=59422","label_smoothing_factor=0.00001
 learning_rate=5e-04
 gradient_accumulation_steps=8
 generation_max_length=150
@@ -13,5 +26,17 @@ fp16_backend=""auto""
 fp16_full_eval=""True""
 full_determinism=""True""
 model_name_or_path = ""Helsinki-NLP/opus-mt-af-fr""
-dataset_name = ""uvci/Koumankan_mt_dyu_fr""",6.19,5.46,0.167,22
-2,MT2,Blank preds,-,-,-,-,-,-,,23
+dataset_name = ""uvci/Koumankan_mt_dyu_fr""",6.19,5.46,0.167,22,Overfit
+2,MT2,Blank preds,-,-,-,,-,-,-,,23,-
+3,MT3,Custom smaller model,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,,"Delta from 1
+data['decoder_attention_heads']=4
+data['decoder_ffn_dim']=1024
+data['dropout']=0.3
+data['encoder_attention_heads']=4
+data['encoder_ffn_dim']=1024
+data['num_beams']=1
+",Same as 1,,,,,
+4,,,,,,,,,,,,
+5,,,,,,,,,,,,
+6,,,,,,,,,,,,
+,,,,,,,,,,,,
