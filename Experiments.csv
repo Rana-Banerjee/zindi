@@ -1,5 +1,5 @@
-Sno.,Name,Description,base_model,base_data,train_epochs,config,train_params,local_BLEU,ct_BLEU,zindi_BLEU,melio_sub_#,train_ct_BLEU
-1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,2000 (1700),"data['decoder_attention_heads']=8
+Sno.,Name,Description,base_model,base_data,train_epochs,train_loss,config,train_params,local_BLEU,ct_BLEU,zindi_BLEU,melio_sub_#,train_ct_BLEU
+1,MT1,MarianTranslate base,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,2000 (1700),,"data['decoder_attention_heads']=8
 data['decoder_ffn_dim']=2048
 data['decoder_layers']=6
 data['decoder_vocab_size']=59422
@@ -27,16 +27,18 @@ fp16_full_eval=""True""
 full_determinism=""True""
 model_name_or_path = ""Helsinki-NLP/opus-mt-af-fr""
 dataset_name = ""uvci/Koumankan_mt_dyu_fr""",6.19,5.46,0.167,22,Overfit
-2,MT2,Blank preds,-,-,-,,-,-,-,,23,-
-3,MT3,Custom smaller model,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,,"Delta from 1
+2,MT2,Blank preds,-,-,-,,,-,-,-,0.148,23,-
+3,MT3,Custom smaller model,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,500,0.0555,"Delta from 1
 data['decoder_attention_heads']=4
 data['decoder_ffn_dim']=1024
 data['dropout']=0.3
 data['encoder_attention_heads']=4
 data['encoder_ffn_dim']=1024
 data['num_beams']=1
-",Same as 1,,,,,
-4,MT4,3 + Custom Tokenizer,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,,Same as 3,Same as 1,,,,,
-5,,,,,,,,,,,,
-6,,,,,,,,,,,,
-,,,,,,,,,,,,
+",Same as 1,,3.94,,,81.49
+4,MT3,Custom smaller model,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,1000,0.0157,Same as 3,Same as 1,,4.40,,,82.65
+5,MT3,Custom smaller model,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,1500,0.0097,Same as 3,Same as 1,,4.41,,,NA
+6,MT4,3 + Custom Tokenizer,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,500,,Same as 3,Same as 1,,,,,
+7,MT4,3 + Custom Sentence Piece Tokenizer,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,500,,Same as 3,Same as 1,,,,,
+7,MT4,3 + Custom Sentence Piece Tokenizer + utf encodings,Helsinki-NLP/opus-mt-af-fr,uvci/Koumankan_mt_dyu_fr,500,,Same as 3,Same as 1,,,,,
+,,,,,,,,,,,,,
