@@ -16,7 +16,7 @@
       "single_word": false,
       "special": true
     },
-    "32001": {
+    "32000": {
       "content": "<pad>",
       "lstrip": false,
       "normalized": false,
