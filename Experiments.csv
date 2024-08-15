@@ -1,8 +1,8 @@
-Sno.,Name,Description,base_model,base_data,train_epochs,config,train_params,train_loss,train_ct_BLEU,valid_ct_BLEU,zindi_BLEU,melio_sub_#
-1,MT1,Base model + Custom Tokenizer + Extra Corpus,Helsinki-NLP/opus-mt-af-fr,Rana-Banerjee/zindi-train-eval,250,"data['max_length']=128
+Sno.,Name,Description,base_model,base_data,config,train_params,train_epochs,train_loss,valid_ct_BLEU,train_ct_BLEU,zindi_BLEU,ct_val_wo_quant,melio_sub_#
+1,MT1,Base model + Custom Tokenizer + Extra Corpus,Helsinki-NLP/opus-mt-af-fr,Rana-Banerjee/zindi-train-eval,"data['max_length']=128
 data['num_beams']=1","os.environ['label_smoothing_factor']=""0.00001""
 os.environ['learning_rate']=""5e-04""
-os.environ['gradient_accumulation_steps']=""8""
+os.environ['gradient_accumulation_steps']=""4""
 os.environ['generation_max_length']=""150""
 os.environ['generation_num_beams']=""1""
 os.environ['max_source_length']= ""150""
@@ -13,14 +13,25 @@ os.environ['eval_steps']=""50""
 os.environ['fp16']=""True""
 os.environ['fp16_backend']=""auto""
 os.environ['fp16_full_eval']=""True""
-os.environ['full_determinism']=""True""",5.3152,,,,
-2,,,,,,,,,,,,
-3,,,,,,,,,,,,
-4,,,,,,,,,,,,
-5,,,,,,,,,,,,
-6,,,,,,,,,,,,
-7,,,,,,,,,,,,
-8,,,,,,,,,,,,
-9,,,,,,,,,,,,
-10,,,,,,,,,,,,
-,,,,,,,,,,,,
+os.environ['full_determinism']=""True""",250,2.5704,1.31,1.59,,,
+2,,,,,,,500,2.403,1.95,2.07,,,
+3,,,,,,,750,2.051,1.90,2.47,,,
+4,,,,,,,1000,2.1058,2.16,,,,
+5,,,,,,,1250,2.074,2.06,,,,
+6,,,,,,,1500,1.844,2.70,,,,
+7,,,,,,,1750,1.8836,2.70,,,,
+8,,,,,,,2000,1.9064,2.68,,,,
+9,,,,,,,2250,1.6895,3.02,4.98,,,
+10,,,,,,,2500,1.7618,-,-,,-,
+11,,,,,,,2750,1.7981,2.74,4.23,,2.84,
+12,,,,,,,3000,1.6227,3.51,5.70,,,
+,,,,,,,3250,1.6911,3.04,,,,
+,,,,,,,3500,1.7063,3.49,,,,
+,,,,,,,3750,1.5446,4.98,,,,
+,,,,,,,4000,,,,,,
+,,,,,,,4250,,,,,,
+,,,,,,,4500,,,,,,
+,,,,,,,4750,,,,,,
+,,,,,,,5000,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
