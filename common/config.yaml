@@ -1,4 +1,5 @@
-model_name_or_path: "Helsinki-NLP/opus-mt-af-fr"
+model_name_or_path: "facebook/nllb-200-distilled-600M"
+# "Helsinki-NLP/opus-mt-af-fr"
 checkpoint: "checkpoint-5000"
 image_name: "zindi-image:0.2.6"
 file_path: "deployment/docker-compose.yml"
