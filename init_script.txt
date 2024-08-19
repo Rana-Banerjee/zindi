@@ -1,15 +1,15 @@
 sudo apt update
-sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository ppa:deadsnakes/ppa --force-yes
 sudo apt update
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.9
+sudo add-apt-repository ppa:deadsnakes/ppa --force-yes
+sudo apt install python3.9 -y
 python3.9 --version
 git config --global user.name "Rana Banerjee"
 git config --global user.email "rana1224@gmail.com"
 cd zindi
 pip install poetry
 poetry shell
-sudo apt-get install python3.9-distutils
+sudo apt-get install python3.9-distutils -y
 poetry install
 
 # install python and jupyter extensions
