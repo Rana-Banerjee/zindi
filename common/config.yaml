@@ -1,6 +1,7 @@
-model_name_or_path: "facebook/nllb-200-distilled-600M"
-# "Helsinki-NLP/opus-mt-af-fr"
-checkpoint: "checkpoint-5000"
+model_name_or_path: "Helsinki-NLP/opus-mt-af-fr"
+# "facebook/nllb-200-distilled-600M"
+# 
+checkpoint: "checkpoint-5400"
 image_name: "zindi-image:0.2.6"
 file_path: "deployment/docker-compose.yml"
 new_model_path: "models/marian/marian_output/"
