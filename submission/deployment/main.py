@@ -13,7 +13,7 @@ import ctranslate2
 import sentencepiece as spm
 
 # Constants
-MODEL_DIR = "./saved_model/checkpoint-1700"
+MODEL_DIR = "./saved_model/checkpoint"
 
 class TranslationModel(Model):
     """
@@ -40,8 +40,8 @@ class TranslationModel(Model):
         Load model and tokenizer from disk.
         """
         try:
-            self.sp_source_model = spm.SentencePieceProcessor(model_file=MODEL_DIR+'/source.spm')
-            self.sp_target_model = spm.SentencePieceProcessor(model_file=MODEL_DIR+'/target.spm')
+            self.sp_source_model = spm.SentencePieceProcessor(model_file=MODEL_DIR+'/sentencepiece.bpe.model')
+            self.sp_target_model = spm.SentencePieceProcessor(model_file=MODEL_DIR+'/sentencepiece.bpe.model')
             #self.tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
             # self.model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_DIR)
             self.model = ctranslate2.Translator(MODEL_DIR)
@@ -82,22 +82,22 @@ class TranslationModel(Model):
     # Ctranslate2 translation
     def _translate(self, model, text):
         tokens = self.sp_source_model.encode(text, out_type=str)
-        tokens[0].insert(0,"dyu")
+        tokens[0].insert(0,"dyu_Latn")
         tokens[0].append("</s>")
-        tokens[0].append("fr")
-        # tokens = ["dyu"] + [[t] for t in tokens] + ["</s>"] + ["fr"]
+        tokens[0].append("fra_Latn")
+        # tokens = ["dyu_Latn"] + [[t] for t in tokens] + ["</s>"] + ["fra_Latn"]
         try:
             results = model.translate_batch(tokens)
             # The translated results are token strings, so we need to convert them to IDs before decoding
             translations = []
             for translation in results:
                 # Convert token strings to IDs before decoding
-                decoded_text = self.sp_target_model.decode(translation.hypotheses[0])
+                decoded_text = self.sp_target_model.decode(translation.hypotheses[0]).replace("fra_Latn ","")
                 translations.append(decoded_text)
         except Exception as e:
             print(f"Translation error: ", e)
-            translations = [""]  # Return empty string if translation fails
-        translations = ["some thing"] 
+            translations = ["Error: "+str(e)]  # Return empty string if translation fails
+        # translations = ["some thing"] 
         return translations
 
     def _create_response(self, translation: str) -> InferResponse:
