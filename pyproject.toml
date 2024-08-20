@@ -19,6 +19,7 @@ pyyaml = "^6.0.2"
 kserve = "^0.13.1"
 iso639 = "^0.1.4"
 vastai = "^0.2.5"
+tensorboard = "^2.17.1"
 
 
 [tool.poetry.group.dev.dependencies]
