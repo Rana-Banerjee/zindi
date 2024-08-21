@@ -1,0 +1,8 @@
+cd ~/.cache/pypoetry/virtualenvs/zindi-LtLKIbXv-py3.9/lib/python3.9/site-packages/ctranslate2/converters
+nano transformers.py 
+
+at def set_common_layers
+#spec.scale_embeddings = module.embed_scale
+import math
+embed_scale = (module.embed_scale if hasattr(module, 'embed_scale')else math.sqrt(module.config.d_model) if module.config.scale_embedding else 1.0)
+spec.scale_embeddings = embed_scale
