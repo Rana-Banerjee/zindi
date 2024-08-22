@@ -7,7 +7,7 @@ services:
         limits:
           cpus: '1.0'
           memory: 2G
-    image: zindi-image:0.3.0
+    image: zindi-image:0.3.1
     platform: linux/amd64
     ports:
     - 8080:8080
