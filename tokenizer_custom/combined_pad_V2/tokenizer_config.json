@@ -8,6 +8,14 @@
       "single_word": false,
       "special": true
     },
+    "1": {
+      "content": "<s>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },    
     "2": {
       "content": "</s>",
       "lstrip": false,
