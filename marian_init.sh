@@ -8,9 +8,12 @@ sudo apt-get -y install cuda-toolkit-12-6
 sudo apt-get install -y nvidia-open
 sudo apt-get install libprotobuf10 protobuf-compiler libprotobuf-dev
 rm -rf cuda-repo-ubuntu2204-12-6-local_12.6.0-560.28.03-1_amd64.deb
+
 git clone https://github.com/marian-nmt/marian
 cd marian
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DUSE_SENTENCEPIECE=ON
 make -j 8
+
+git clone https://github.com/marian-nmt/sacreBLEU.git sacreBLEU
