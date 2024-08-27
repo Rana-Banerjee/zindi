@@ -1,8 +1,8 @@
-model_name_or_path: "/root/zindi/models/marian/marian_output/checkpoint-380"
+model_name_or_path: "/root/zindi/models/marian/marian_output/checkpoint-860"
 # "models/nllb/nllb_output/checkpoint-108"
 # "facebook/nllb-200-distilled-600M"
 # 
-checkpoint: "checkpoint-618"
+checkpoint: "checkpoint-700"
 image_name: "zindi-image:0.3.0"
 file_path: "deployment/docker-compose.yml"
 new_model_path: "models/marian/marian_output/"
