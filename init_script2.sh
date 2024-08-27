@@ -1,5 +1,5 @@
 yes | poetry install
-git clone https://github.com/huggingface/transformers.git
+git clone https://github.com/huggingface/transformers.git --branch v4.44.1
 cd transformers
 yes | pip install updgrade pip
 pip install -e .
