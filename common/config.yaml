@@ -1,4 +1,4 @@
-model_name_or_path: "Helsinki-NLP/opus-mt-af-fr"
+model_name_or_path: "/root/zindi/models/marian/marian_output/checkpoint-380"
 # "models/nllb/nllb_output/checkpoint-108"
 # "facebook/nllb-200-distilled-600M"
 # 
